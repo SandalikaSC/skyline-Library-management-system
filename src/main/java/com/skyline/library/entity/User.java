@@ -23,6 +23,6 @@ public class User {
     private String phoneNumber;
     private String address;
 
-    @OneToMany(mappedBy = "User", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<Payment> payments;
 }
