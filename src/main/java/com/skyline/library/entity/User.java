@@ -25,4 +25,8 @@ public class User {
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<Payment> payments;
+
+    @OneToMany(mappedBy = "user")
+    private List<UserBook> borrowBooks;
+
 }

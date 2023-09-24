@@ -38,4 +38,10 @@ public class Book {
             inverseJoinColumns = @JoinColumn(name = "categoryId")
     )
     private List<Category> categoryList;
+
+    @OneToMany (mappedBy = "book")
+    private List<UserBook> userList;
+
+
+
 }
