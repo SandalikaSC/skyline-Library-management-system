@@ -1,18 +1,21 @@
 package com.skyline.library.service;
 
 import com.skyline.library.entity.User;
+import com.skyline.library.exception.NotFoundException;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface UserService {
     List<User> getAllMembers();
 
     User getAllMembers(User user);
 
-    Optional<User> getUserById(Long userId);
+    User getUserById(Long userId) throws NotFoundException;
 
-    void deleteUser(Long userId);
+    void deleteUser(Long userId) throws NotFoundException;
 
-    User updateUser(Long userId, User user);
+    User updateUser(Long userId, User user) throws NotFoundException;
+
+    List<User> searchUsersByName(String name);
+    User getUserByEmail(String email) throws NotFoundException;
 }
