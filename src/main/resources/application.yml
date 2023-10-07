@@ -6,7 +6,7 @@ spring:
     driver-class-name : com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
     show-sql: true
     properties:
       hibernate:
@@ -14,5 +14,5 @@ spring:
     database: mysql
     database-platform: org.hibernate.dialect.MySQLDialect
 
-  jwt:
-    SECRET_KEY: 4NOlfXxAeAzJxZeX6jlGROqnhZcT1Sii
+#  jwt:
+#    SECRET_KEY: 4NOlfXxAeAzJxZeX6jlGROqnhZcT1Sii
