@@ -19,4 +19,9 @@ public class BookController {
     public List<Book> searchBooksByTitle(@RequestParam String title) {
         return bookService.searchBooksByTitle(title);
     }
+
+    @GetMapping("/search")
+    public List<Book> searchBooksByAuthorName(@RequestParam("authorName") String authorName) {
+        return bookService.findBooksByAuthorName(authorName);
+    }
 }

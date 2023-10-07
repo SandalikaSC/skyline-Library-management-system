@@ -14,4 +14,6 @@ public interface BookService {
 
     // Additional search methods
     List<Book> searchBooksByTitle(String title);
+
+    List<Book> findBooksByAuthorName(String authorName);
 }
